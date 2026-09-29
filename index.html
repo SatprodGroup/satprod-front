@@ -1,205 +1,307 @@
-<!DOCTYPE html lang="en" data-ng-app="app" ng-controller="SEOCtrl">
-<!--[if IE 8]>          <html lang="en" class="ie ie8" data-ng-app="app" ng-controller="SEOCtrl"> <![endif]-->
-<!--[if IE 9]>          <html lang="en" class="ie ie9" data-ng-app="app" ng-controller="SEOCtrl"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html lang="en" data-ng-app="app" ng-controller="SEOCtrl"> <!--<![endif]-->
-    <head>
-        <base href="/">
-        <meta charset="utf-8" />
-        <title data-ng-bind="header+' | Satprod'">Satprod</title>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Satprod | Software, electronics and networks, engineered in Brussels</title>
+  <meta name="description" content="Satprod is a Brussels engineering studio building web and software products, embedded electronics, language processing and network infrastructure that stay stable and easy to maintain.">
+  <meta name="author" content="Louis Borsu">
+  <link rel="canonical" href="https://satprod.net/">
+  <meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14181f" media="(prefers-color-scheme: dark)">
 
-        <!-- SEO -->
-        <meta name="keywords" content="{{keywords}}" />
-        <meta name="description" content="{{description}}" />
-        <meta name="author" content="Louis Borsu">
-        <link rel="author" href="https://plus.google.com/+LouisBorsu"/>
-        <link rel="publisher" href="https://plus.google.com/+LouisBorsu" />
-        <meta property="og:title" content="{{header}} | Satprod"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="{{url}}"/>
-        <meta property="og:image" content="{{image_url}}"/>
-        <meta property="og:description" content="{{description}}"/>
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@satblip">
-        <meta name="twitter:url" content="{{url}}">
-        <meta name="twitter:title" content="{{header}} | Satprod">
-        <meta name="twitter:description" content="{{description}}">
-        <meta name="twitter:image" content="{{image_url}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Satprod">
+  <meta property="og:title" content="Satprod | Engineering studio in Brussels">
+  <meta property="og:description" content="Web and software development, embedded electronics, language processing and networks. Built to last, documented, yours.">
+  <meta property="og:url" content="https://satprod.net/">
+  <meta property="og:image" content="https://satprod.net/assets/images/logo-favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@satprodgroup">
 
-        <meta name="fragment" content="!">
+  <link rel="icon" type="image/png" href="/assets/images/logo-favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/logo-favicon.png">
 
-        <!-- mobile settings -->
-        <meta name="viewport" content="width=device-width, maximum-scale=2, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/assets/images/logo-favicon.png" />
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 
-        <!-- WEB FONTS -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Satprod",
+    "legalName": "Satprod",
+    "url": "https://satprod.net",
+    "logo": "https://satprod.net/assets/images/logo-favicon.png",
+    "foundingDate": "2011",
+    "vatID": "BE0746499330",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Louis Borsu",
+        "image": "https://satprod.net/assets/images/team/louis.jpg"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenue Herrmann-Debroux 54",
+      "addressLocality": "Brussels",
+      "addressRegion": "Brussels-Capital Region",
+      "postalCode": "1160",
+      "addressCountry": "BE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+3227905240",
+      "email": "info@satprod.net"
+    },
+    "sameAs": [
+      "https://www.facebook.com/satprod",
+      "https://www.linkedin.com/company/satprod/",
+      "https://twitter.com/satprodgroup"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!--[if lt IE 9]>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
-        <![endif]-->
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grid-lines" aria-hidden="true"></div>
 
-        <!-- CORE CSS -->
-        <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/animate.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/superslides.css" rel="stylesheet" type="text/css" />
+  <header class="site-header">
+    <div class="wrap">
+      <div class="bar">
+        <a class="brand" href="/" aria-label="Satprod home">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="12.92 2" stroke-dashoffset="-1" pathLength="59.68"/></svg>
+          satprod
+        </a>
+        <div class="bar-end">
+          <nav class="nav" id="site-nav" aria-label="Main">
+            <a href="/#services">Services</a>
+            <a href="/#approach">Approach</a>
+            <a class="btn btn-accent" href="/contact/">Start a project</a>
+          </nav>
+          <button class="icon-btn theme-toggle" type="button" aria-label="Toggle colour theme">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+          <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-controls="site-nav" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- REVOLUTION SLIDER -->
-        <link href="/assets/plugins/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+  <main id="main">
 
-        <!-- THEME CSS -->
-        <link href="/assets/css/essentials.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/layout.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/layout-responsive.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/css/layout-dark.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span>Engineering studio, Brussels, since 2011</span>
+          <h1>Technology that <span class="accent">works</span>, and keeps working.</h1>
+          <p class="lede">Satprod is a multidisciplinary team of developers and engineers. From web platforms to embedded electronics, we build custom solutions that are stable, documented and easy to maintain, with only the best technology making its way into your final product.</p>
+          <div class="actions">
+            <a class="btn btn-accent" href="/contact/">
+              Start a project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#services">Explore our skills</a>
+          </div>
+        </div>
 
-        <!-- TOP NAV -->
-        <header id="topNav">
-            <div class="container">
+        <div class="orbit" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="21 4" stroke-dashoffset="-2" pathLength="100"/></svg>
+          <svg class="ring r2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="0.6 2.4" stroke-linecap="round" pathLength="100"/></svg>
+          <svg class="ring r3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="21 4" stroke-dashoffset="-2" pathLength="100"/></svg>
+          <div class="core"></div>
+          <span class="chip"><b>&gt;</b> deploy --prod</span>
+          <span class="chip"><b>&#9679;</b> firmware flashed</span>
+          <span class="chip"><b>&#8599;</b> mesh online</span>
+        </div>
+      </div>
+    </section>
 
-                <!-- Mobile Menu Button -->
-                <button class="btn" data-toggle="collapse" data-target=".nav-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
+    <!-- SKILLS MARQUEE -->
+    <div class="marquee" aria-label="Skills">
+      <div class="marquee-track">
+        <ul>
+          <li>Web development</li><li>Software deployment</li><li>Embedded electronics</li><li>Language processing</li><li>IoT</li><li>Mesh &amp; wireless</li><li>VoIP &amp; IPTV</li><li>Fibre optics</li><li>Cloud</li><li>Mobile apps</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Web development</li><li>Software deployment</li><li>Embedded electronics</li><li>Language processing</li><li>IoT</li><li>Mesh &amp; wireless</li><li>VoIP &amp; IPTV</li><li>Fibre optics</li><li>Cloud</li><li>Mobile apps</li>
+        </ul>
+      </div>
+    </div>
 
-                <!-- Logo text or image -->
-                <a ng-click="navHome()" class="logo" href="/">
-                    <img id="logo-on-the-top" class="logo-top" src="/assets/images/logo.png" alt="satprod" />
-                </a>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">What we do</span>
+            <h2>One team, from the circuit board to the cloud.</h2>
+          </div>
+          <p>Our expertise covers fields as disparate as web development, language processing and embedded electronics, combined to design solutions tailored to each client.</p>
+        </div>
 
-                <!-- Top Nav -->
-                <div class="navbar-collapse nav-main-collapse collapse pull-right">
-                    <nav class="nav-main mega-menu">
-                        <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
-                            <!-- <li ng-class="{active:header == 'The Company'}">
-                                <a ng-click="navCompany()" href="/company">
-                                    The company
-                                </a>
-                            </li>
-                            <li ng-class="{active:header == 'References'}">
-                                <a ng-click="navReferences()" href="/references">
-                                    References
-                                </a>
-                            </li>
-                            <li ng-class="{active:header == 'Engineering'}">
-                                <a ng-click="navEngineering()" href="/engineering">
-                                    Engineering
-                                </a>
-                            </li>
-                            <li ng-class="{active:header == 'Development'}">
-                                <a ng-click="navDevelopment()" href="/development">
-                                    Development
-                                </a>
-                            </li> -->
-
-                            <li ng-class="{active:header == 'Contact'}">
-                                <a ng-click="navContact()" href="/contact">
-                                    Contact us
-                                </a>
-                            </li>
-
-                        </ul>
-                    </nav>
-                </div>
-                <!-- /Top Nav -->
-
+        <div class="bento">
+          <article class="card span-4 feature reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 5l-3 14"/></svg></div>
+            <div>
+              <h3>Web &amp; software development</h3>
+              <p>Platforms, apps and back-ends built on modern languages and frameworks, which speeds up delivery and keeps your invoice reasonable.</p>
+              <ul class="tags"><li>Node.js</li><li>Ruby</li><li>PHP</li><li>PostgreSQL</li><li>MongoDB</li><li>Mobile</li><li>AWS</li></ul>
             </div>
-        </header>
+          </article>
 
-        <span id="header_shadow"></span>
-        <!-- /TOP NAV -->
-
-        <section class="view view-fade angular-animate" data-ng-view>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-
-            <!-- copyright , scrollTo Top -->
-            <div class="footer-bar">
-                <div class="container">
-                    <span class="copyright">Copyright &copy; Satprod. All Rights Reserved.</span>
-                </div>
+          <article class="card span-2 reveal">
+            <div class="stat">15<sup>yrs</sup></div>
+            <div>
+              <h3>Of shipping</h3>
+              <p>Building and maintaining client projects since 2011.</p>
             </div>
-            <!-- copyright , scrollTo Top -->
+          </article>
 
-        </footer>
-        <!-- /FOOTER -->
+          <article class="card span-2 reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+            <div>
+              <h3>Embedded electronics</h3>
+              <p>Design, prototyping and firmware for connected devices and IoT.</p>
+              <ul class="tags"><li>C / C++</li><li>IoT</li><li>Prototyping</li></ul>
+            </div>
+          </article>
 
-        <!-- JSON-ld -->
-        <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Organization",
-          "name": "Satprod",
-          "legalName": "Satprod",
-          "url": "https://satprod.net",
-          "logo": "https://satprod.net/assets/images/logo.png",
-          "foundingDate": "2011",
-          "founders": [
-            {
-              "@type": "Person",
-              "name": "Louis Borsu",
-              "email": "mailto:sat@satprod.net",
-              "image": "https://satprod.net/assets/images/team/louis.jpg"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rue au bois, 92",
-            "addressLocality": "Brussels",
-            "addressRegion": "Brussels",
-            "postalCode": "1160",
-            "addressCountry": "Belgium"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "telephone": "[+3223183451]",
-            "email": "info@satprod.net"
-          },
-          "sameAs": [
-            "https://www.facebook.com/satprod",
-            "https://www.linkedin.com/company/satprod/",
-            "https://twitter.com/satprodgroup"
-          ]
-        }
-        </script>
+          <article class="card span-2 reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+            <div>
+              <h3>Language processing</h3>
+              <p>Tools that read, classify and understand text so your team does not have to.</p>
+              <ul class="tags"><li>NLP</li><li>Automation</li></ul>
+            </div>
+          </article>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48574141-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+          <article class="card span-2 dark reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-5.5 5.5M12 12l5.5 5.5M7 19h10"/></svg></div>
+            <div>
+              <h3>Networks &amp; infrastructure</h3>
+              <p>Wireless mesh, fibre, VoIP and IPTV, from the rack to the last access point.</p>
+              <ul class="tags"><li>Mesh</li><li>Fibre</li><li>VoIP</li><li>IPTV</li></ul>
+            </div>
+          </article>
 
-          gtag('config', 'UA-48574141-1');
-        </script>
+          <article class="card span-3 reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></div>
+            <div>
+              <h3>Deployment &amp; training</h3>
+              <p>We roll out what we build, and train your employees to get the most out of it.</p>
+            </div>
+          </article>
 
+          <article class="card span-3 reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div>
+              <h3>Long-term support</h3>
+              <p>Keep your project at a high level of technology, without the headaches.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <!-- PRE-js -->
-        <script type="text/javascript" src="/assets/plugins/modernizr.min.js"></script>
-        <script type="text/javascript" src="/assets/plugins/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="/assets/plugins/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="/assets/js/top-nav.js"></script>
-        <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/assets/plugins/angular/angular.min.js"></script>
-        <script src="/assets/plugins/angular/angular-animate.min.js"></script>
-        <script src="/assets/plugins/angular/angular-route.min.js"></script>
-        <script src="/assets/plugins/angular/angular-sanitize.min.js"></script>
-        <script src="/assets/js/angular_scripts/app.js"></script>
-        <script src="/assets/js/angular_scripts/controller/ReferencesCtrl.js"></script>
-        <script src="/assets/js/angular_scripts/controller/SEOCtrl.js"></script>
-        <script src="/assets/js/angular_scripts/controller/ContactCtrl.js"></script>
+    <!-- APPROACH -->
+    <section class="section" id="approach" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">How we work</span>
+            <h2>Built in-house.<br>Handed over openly.</h2>
+          </div>
+          <p>Every solution is developed internally, which gives you and us complete freedom over the technologies, their implementation and the final design.</p>
+        </div>
 
-    </body>
+        <ol class="principles reveal">
+          <li>
+            <h3>Affordable</h3>
+            <p>The latest languages and frameworks speed up development considerably, and your final invoice with it.</p>
+          </li>
+          <li>
+            <h3>Well documented</h3>
+            <p>Everything we ship is documented so you can use it to its full potential.</p>
+          </li>
+          <li>
+            <h3>Easily maintainable</h3>
+            <p>We are fully transparent about the technologies inside, so maintenance can be done by us or by your own team.</p>
+          </li>
+          <li>
+            <h3>Highly customisable</h3>
+            <p>No black boxes, no lock-in. The product is shaped around your needs, not the other way round.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wrap reveal">
+      <div class="cta">
+        <div>
+          <h2>Got a project in mind?</h2>
+          <p>Tell us what you are building. Drop us a line and we will get back to you as soon as possible.</p>
+        </div>
+        <a class="btn btn-accent" href="/contact/">
+          Contact us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/" aria-label="Satprod home">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="12.92 2" stroke-dashoffset="-1" pathLength="59.68"/></svg>
+            satprod
+          </a>
+          <p>Software, electronics and networks, engineered in Brussels.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <address>Avenue Herrmann-Debroux 54<br>1160 Auderghem, Brussels<br>Belgium</address>
+        </div>
+        <div>
+          <h4>Talk</h4>
+          <ul>
+            <li><a href="mailto:info@satprod.net">info@satprod.net</a></li>
+            <li><a href="tel:+3227905240">+32 2 790 52 40</a></li>
+            <li>VAT BE 0746.499.330</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/satprod/" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/satprod" rel="noopener">Facebook</a></li>
+            <li><a href="https://twitter.com/satprodgroup" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Satprod. All rights reserved.</span>
+        <span>Made in Brussels</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
 </html>

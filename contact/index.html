@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Page not found | Satprod</title>
-  <meta name="description" content="This page does not exist.">
+  <title>Contact | Satprod</title>
+  <meta name="description" content="Get in touch with Satprod, engineering studio in Brussels. Tell us about your project and we will get back to you as soon as possible.">
   <meta name="author" content="Louis Borsu">
-  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://satprod.net/contact/">
   <meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#14181f" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Satprod">
-  <meta property="og:title" content="Page not found | Satprod">
-  <meta property="og:description" content="This page does not exist.">
-  <meta property="og:url" content="https://satprod.net/">
+  <meta property="og:title" content="Contact | Satprod">
+  <meta property="og:description" content="Get in touch with Satprod, engineering studio in Brussels. Tell us about your project and we will get back to you as soon as possible.">
+  <meta property="og:url" content="https://satprod.net/contact/">
   <meta property="og:image" content="https://satprod.net/assets/images/logo-favicon.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@satprodgroup">
@@ -62,12 +62,73 @@
   </header>
 
   <main id="main">
-    <section class="wrap lost">
-      <span class="eyebrow" style="justify-self:center"><span class="dot"></span>Error 404</span>
-      <h1>Lost <span class="accent">signal</span>.</h1>
-      <p>The page you are looking for does not exist, or has moved.</p>
-      <a class="btn btn-accent" href="/">Back to home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow"><span class="dot"></span>Contact</span>
+        <h1>Drop us a line,<br>or just say <span class="accent">hello</span>.</h1>
+        <p>Tell us about your project, your idea or your problem. We will get back to you as soon as possible.</p>
+      </div>
     </section>
+
+    <section class="wrap contact-grid">
+      <div class="panel" data-contact aria-live="polite">
+        <form class="form" action="https://1pwl37dw95.execute-api.eu-west-1.amazonaws.com/PROD" method="post">
+          <div class="row">
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email address</label>
+              <input id="f-email" name="email" type="email" maxlength="100" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" maxlength="5000" rows="7" required></textarea>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Leave this empty</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <p class="status" role="alert"></p>
+          <div class="form-foot">
+            <small>All fields are required.</small>
+            <button class="btn btn-accent" type="submit"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+          </div>
+        </form>
+
+        <div class="sent">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></div>
+          <h2 tabindex="-1">Message sent.</h2>
+          <p>Thanks for reaching out, we will contact you back as soon as possible.</p>
+          <button class="btn btn-ghost" type="button" data-reset>Send another message</button>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <ul class="info-list">
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><span class="k">Address</span><div class="v"><address>Avenue Herrmann-Debroux 54<br>1160 Auderghem, Brussels<br>Belgium</address></div></div>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <div><span class="k">Email</span><span class="v"><a href="mailto:info@satprod.net">info@satprod.net</a></span></div>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+            <div><span class="k">Phone</span><span class="v"><a href="tel:+3227905240">+32 2 790 52 40</a></span></div>
+          </li>
+          <li>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+            <div><span class="k">VAT</span><span class="v">BE 0746.499.330</span></div>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
   </main>
 
   <footer class="site-footer">
