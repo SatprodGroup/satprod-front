@@ -22,9 +22,7 @@
   <link rel="icon" type="image/png" href="/assets/images/logo-favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/logo-favicon.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
 
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
@@ -94,7 +92,7 @@
           </div>
           <p class="status" role="alert"></p>
           <div class="form-foot">
-            <small>All fields are required.</small>
+            <small>All fields are required. We only use your details to reply, see our <a href="/privacy/">privacy policy</a>.</small>
             <button class="btn btn-accent" type="submit"><span>Send message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
           </div>
         </form>
@@ -164,7 +162,7 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; <span data-year>2026</span> Satprod SRL. All rights reserved.</span>
-        <span class="footer-links"><a href="/legal/">Legal notice</a><span>Made in Belgium</span></span>
+        <span class="footer-links"><a href="/legal/">Legal notice</a><a href="/privacy/">Privacy</a><span>Made in Belgium</span></span>
       </div>
     </div>
   </footer>
