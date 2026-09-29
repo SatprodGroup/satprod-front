@@ -120,3 +120,53 @@
     });
   }
 })();
+
+/* ---------- work gallery ---------- */
+(function () {
+  'use strict';
+  var dialog = document.querySelector('.work-dialog');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  var title = dialog.querySelector('#dlg-title');
+  var body = dialog.querySelector('.dlg-body');
+
+  function open (card, updateHash) {
+    title.textContent = card.querySelector('.work-title').textContent;
+    body.replaceChildren(card.querySelector('template').content.cloneNode(true));
+    var gallery = body.querySelector('.dlg-gallery');
+    if (gallery.children.length > 1) {
+      var hint = document.createElement('p');
+      hint.className = 'dlg-hint';
+      hint.textContent = gallery.children.length + ' images, swipe or use the arrow keys';
+      body.appendChild(hint);
+    }
+    dialog.dataset.slug = card.id;
+    dialog.showModal();
+    if (updateHash) history.replaceState(null, '', '#' + card.id);
+  }
+
+  document.querySelectorAll('.work-card').forEach(function (card) {
+    card.querySelector('.work-open').addEventListener('click', function () {
+      // On the home page, the full list lives on /work/: open the dialog here anyway.
+      open(card, location.pathname.indexOf('/work') === 0);
+    });
+  });
+
+  dialog.querySelector('.dlg-close').addEventListener('click', function () { dialog.close(); });
+  dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', function () {
+    if (location.hash) history.replaceState(null, '', location.pathname);
+    var card = document.getElementById(dialog.dataset.slug);
+    if (card) card.querySelector('.work-open').focus();
+  });
+  dialog.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var g = dialog.querySelector('.dlg-gallery');
+    if (!g) return;
+    e.preventDefault();
+    g.scrollBy({ left: (e.key === 'ArrowRight' ? 1 : -1) * g.clientWidth, behavior: 'smooth' });
+  });
+
+  // Deep link: /work/#royal-tervuren-app opens that project.
+  var target = location.hash && document.getElementById(location.hash.slice(1));
+  if (target && target.classList.contains('work-card')) open(target, false);
+})();
