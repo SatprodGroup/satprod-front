@@ -88,7 +88,7 @@
       e.preventDefault();
       if (fields.website.value) return; // honeypot
       submit.disabled = true;
-      label.textContent = 'Sending...';
+      label.textContent = form.dataset.sending || 'Sending...';
       status.removeAttribute('data-kind');
 
       fetch(form.action, {
@@ -107,7 +107,7 @@
         if (sent) sent.focus();
       }).catch(function () {
         status.dataset.kind = 'error';
-        status.textContent = 'Something went wrong while sending your message. Please try again, or email us directly at info@satprod.net.';
+        status.textContent = form.dataset.error || 'Something went wrong while sending your message. Please try again, or email us directly at info@satprod.net.';
       }).then(function () {
         submit.disabled = false;
         label.textContent = idle;

@@ -1,10 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url> <loc>https://satprod.net/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/services/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/work/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/about/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/contact/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/legal/</loc> <changefreq>yearly</changefreq> </url>
-<url> <loc>https://satprod.net/privacy/</loc> <changefreq>yearly</changefreq> </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://satprod.net/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/services/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/services/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/services/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/services/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/services/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/services/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/work/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/work/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/work/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/realisations/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/work/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/work/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/about/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/about/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/a-propos/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/about/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/contact/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/contact/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/contact/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/contact/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/legal/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/legal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/legal/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/mentions-legales/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/legal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/legal/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/privacy/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/privacy/"/>
+  </url>
+  <url>
+    <loc>https://satprod.net/fr/confidentialite/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://satprod.net/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://satprod.net/fr/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://satprod.net/privacy/"/>
+  </url>
 </urlset>
