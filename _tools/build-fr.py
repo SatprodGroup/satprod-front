@@ -101,14 +101,14 @@ def translate_attributes(tag, missing):
         if re.search(r'(name="description"|property="og:(title|description|image:alt)")', tag):
             return re.sub(r'(content)="([^"]*)"', repl, tag)
         return tag
-    return re.sub(r'\b(aria-label|alt|title|data-sending|data-error)="([^"]*)"', repl, tag)
+    return re.sub(r'\b(aria-label|alt|title|placeholder|data-sending|data-error)="([^"]*)"', repl, tag)
 
 
 def localise_links(s):
     def repl(m):
-        path, frag = m.group(2), m.group(3) or ''
-        return f'{m.group(1)}"{PAGES.get(path, path)}{frag}"'
-    s = re.sub(r'(href=)"(/[a-z/-]*/|/)(#[^"]*)?"', repl, s)
+        path, query, frag = m.group(2), m.group(3) or '', m.group(4) or ''
+        return f'{m.group(1)}"{PAGES.get(path, path)}{query}{frag}"'
+    s = re.sub(r'(href=)"(/[a-z/-]*/|/)(\?[^"#]*)?(#[^"]*)?"', repl, s)
     return s
 
 
