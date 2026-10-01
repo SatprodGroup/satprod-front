@@ -81,9 +81,9 @@
         </a>
         <div class="bar-end">
           <nav class="nav" id="site-nav" aria-label="Main">
-            <a href="/#services">Services</a>
+            <a href="/services/">Services</a>
             <a href="/work/">Work</a>
-            <a href="/#approach">Approach</a>
+            <a href="/about/">About</a>
             <a class="btn btn-accent" href="/contact/">Start a project</a>
           </nav>
           <button class="icon-btn theme-toggle" type="button" aria-label="Toggle colour theme">
@@ -112,7 +112,7 @@
               Start a project
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
-            <a class="btn btn-ghost" href="#services">Explore our skills</a>
+            <a class="btn btn-ghost" href="/services/">Explore our services</a>
           </div>
         </div>
 
@@ -155,7 +155,7 @@
           <article class="card span-4 feature reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 5l-3 14"/></svg></div>
             <div>
-              <h3>Web &amp; software development</h3>
+              <h3><a class="card-link" href="/services/#web">Web &amp; software development</a></h3>
               <p>Platforms, apps and back-ends built on modern languages and frameworks, which speeds up delivery and keeps your invoice reasonable.</p>
               <ul class="tags"><li>Node.js</li><li>Ruby</li><li>PHP</li><li>PostgreSQL</li><li>MongoDB</li><li>Mobile</li><li>AWS</li></ul>
             </div>
@@ -172,7 +172,7 @@
           <article class="card span-2 reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
             <div>
-              <h3>Embedded electronics</h3>
+              <h3><a class="card-link" href="/services/#electronics">Embedded electronics</a></h3>
               <p>Design, prototyping and firmware for connected devices and IoT.</p>
               <ul class="tags"><li>C / C++</li><li>IoT</li><li>Prototyping</li></ul>
             </div>
@@ -181,7 +181,7 @@
           <article class="card span-2 reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
             <div>
-              <h3>Language processing</h3>
+              <h3><a class="card-link" href="/services/#language">Language processing</a></h3>
               <p>Tools that read, classify and understand text so your team does not have to.</p>
               <ul class="tags"><li>NLP</li><li>Automation</li></ul>
             </div>
@@ -190,7 +190,7 @@
           <article class="card span-2 dark reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-5.5 5.5M12 12l5.5 5.5M7 19h10"/></svg></div>
             <div>
-              <h3>Networks &amp; infrastructure</h3>
+              <h3><a class="card-link" href="/services/#networks">Networks &amp; infrastructure</a></h3>
               <p>Wireless mesh, fibre, VoIP and IPTV, from the rack to the last access point.</p>
               <ul class="tags"><li>Mesh</li><li>Fibre</li><li>VoIP</li><li>IPTV</li></ul>
             </div>
@@ -199,7 +199,7 @@
           <article class="card span-3 reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></div>
             <div>
-              <h3>Deployment &amp; training</h3>
+              <h3><a class="card-link" href="/services/#deployment">Deployment &amp; training</a></h3>
               <p>We roll out what we build, and train your employees to get the most out of it.</p>
             </div>
           </article>
@@ -207,11 +207,12 @@
           <article class="card span-3 reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <div>
-              <h3>Long-term support</h3>
+              <h3><a class="card-link" href="/services/#support">Long-term support</a></h3>
               <p>Keep your project at a high level of technology, without the headaches.</p>
             </div>
           </article>
         </div>
+        <div class="work-more reveal"><a class="btn btn-ghost" href="/services/">All services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
       </div>
     </section>
 
@@ -285,35 +286,19 @@
       </div>
     </section>
 
-    <!-- APPROACH -->
-    <section class="section" id="approach" style="padding-top:0">
+    <!-- ABOUT -->
+    <section class="section" id="about" style="padding-top:0">
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow">How we work</span>
+            <span class="eyebrow">About us</span>
             <h2>Built in-house.<br>Handed over openly.</h2>
           </div>
-          <p>Every solution is developed internally, which gives you and us complete freedom over the technologies, their implementation and the final design.</p>
+          <div>
+            <p>Since 2011, every solution we deliver is developed internally, documented and easy to maintain, by us or by your own team. No black boxes, no lock-in.</p>
+            <p style="margin-top:20px"><a class="btn btn-ghost" href="/about/">About Satprod <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+          </div>
         </div>
-
-        <ol class="principles reveal">
-          <li>
-            <h3>Affordable</h3>
-            <p>The latest languages and frameworks speed up development considerably, and your final invoice with it.</p>
-          </li>
-          <li>
-            <h3>Well documented</h3>
-            <p>Everything we ship is documented so you can use it to its full potential.</p>
-          </li>
-          <li>
-            <h3>Easily maintainable</h3>
-            <p>We are fully transparent about the technologies inside, so maintenance can be done by us or by your own team.</p>
-          </li>
-          <li>
-            <h3>Highly customisable</h3>
-            <p>No black boxes, no lock-in. The product is shaped around your needs, not the other way round.</p>
-          </li>
-        </ol>
       </div>
     </section>
 
@@ -342,6 +327,15 @@
             satprod
           </a>
           <p>Software, electronics and networks, engineered in Belgium.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
         </div>
         <div>
           <h4>Visit</h4>
