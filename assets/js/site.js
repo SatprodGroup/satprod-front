@@ -84,6 +84,11 @@
     var label = submit.querySelector('span');
     var idle = label.textContent;
 
+    // Preselect the topic when arriving from a service or a use case (?topic=networks).
+    var topic = fields.topic;
+    var wanted = new URLSearchParams(location.search).get('topic');
+    if (topic && wanted && topic.querySelector('option[value="' + wanted.replace(/[^a-z]/g, '') + '"]')) topic.value = wanted;
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (fields.website.value) return; // honeypot
@@ -97,7 +102,7 @@
         body: JSON.stringify({
           name: fields.name.value.trim(),
           email: fields.email.value.trim(),
-          message: fields.message.value.trim()
+          message: (topic && topic.value ? '[' + topic.options[topic.selectedIndex].text + ']\n\n' : '') + fields.message.value.trim()
         })
       }).then(function (res) {
         if (!res.ok) throw new Error(res.status);

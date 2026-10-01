@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="/assets/images/logo-favicon.png">
 
   <link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css?v=9942f06b0b">
+  <link rel="stylesheet" href="/assets/css/site.css?v=aa9a2a52f9">
 
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 
@@ -52,6 +52,7 @@
             <a href="/fr/a-propos/">À propos</a>
             <a class="btn btn-accent" href="/fr/contact/">Démarrer un projet</a>
           </nav>
+          <a class="btn btn-accent header-cta" href="/fr/contact/">Contact</a>
           <a class="lang-switch" href="/contact/" hreflang="en" lang="en" title="English version">EN</a>
           <button class="icon-btn theme-toggle" type="button" aria-label="Changer le thème de couleur">
             <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -70,8 +71,8 @@
     <section class="page-hero">
       <div class="wrap">
         <span class="eyebrow">Contact</span>
-        <h1>Écrivez-nous, <br>ou dites simplement bonjour.</h1>
-        <p>Parlez-nous de votre projet, de votre idée ou de votre problème. Nous vous répondrons au plus vite.</p>
+        <h1>Parlez-nous de <br>votre projet.</h1>
+        <p>Décrivez ce qui doit fonctionner, même dans les grandes lignes. Nous vous répondons personnellement, par e-mail ou par téléphone.</p>
       </div>
     </section>
 
@@ -89,8 +90,12 @@
             </div>
           </div>
           <div class="field">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" maxlength="5000" rows="7" required></textarea>
+            <label for="f-topic">Sujet <span>(facultatif)</span></label>
+            <select id="f-topic" name="topic"><option value="" disabled selected>Choisissez un sujet</option><option value="web">Développement web et logiciel</option><option value="electronics">Électronique embarquée</option><option value="ai">IA et traitement du langage</option><option value="networks">Réseaux et infrastructure</option><option value="deployment">Déploiement et formation</option><option value="support">Support à long terme</option><option value="other">Je ne sais pas encore</option></select>
+          </div>
+          <div class="field">
+            <label for="f-message">Votre projet</label>
+            <textarea id="f-message" name="message" maxlength="5000" rows="7" required placeholder="Ce qui doit fonctionner, pour quand, et ce qui existe déjà."></textarea>
           </div>
           <div class="hp" aria-hidden="true">
             <label for="f-website">Laissez ce champ vide</label>
@@ -98,7 +103,7 @@
           </div>
           <p class="status" role="alert"></p>
           <div class="form-foot">
-            <small>Tous les champs sont obligatoires. Nous utilisons vos données uniquement pour vous répondre, voir notre <a href="/fr/confidentialite/">politique de confidentialité</a>.</small>
+            <small>Le nom, l'e-mail et le projet sont obligatoires. Nous utilisons vos données uniquement pour vous répondre, voir notre <a href="/fr/confidentialite/">politique de confidentialité</a>.</small>
             <button class="btn btn-accent" type="submit"><span>Envoyer le message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
           </div>
         </form>
@@ -108,10 +113,19 @@
           <h2 tabindex="-1">Message envoyé.</h2>
           <p>Merci pour votre message, nous vous recontacterons au plus vite.</p>
           <button class="btn btn-ghost" type="button" data-reset>Envoyer un autre message</button>
+          <a class="btn btn-ghost" href="/fr/realisations/">Voir nos réalisations</a>
         </div>
       </div>
 
       <aside class="panel">
+        <div class="next-steps">
+          <h2>La suite</h2>
+          <ol>
+            <li><b>Nous vous répondons personnellement</b><span>par e-mail ou par téléphone, selon les coordonnées laissées.</span></li>
+            <li><b>Un premier appel</b><span>pour comprendre votre contexte, vos contraintes et vos objectifs.</span></li>
+            <li><b>Une offre écrite</b><span>avec périmètre, planning et prix, avant tout démarrage.</span></li>
+          </ol>
+        </div>
         <ul class="info-list">
           <li>
             <div><span class="k">Adresse</span><div class="v"><address>Rue de la Chapelle 30<br>5310 Eghezée<br>Belgique</address></div></div>
@@ -176,6 +190,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site.js?v=a522794350" defer></script>
+  <script src="/assets/js/site.js?v=3ef74775d4" defer></script>
 </body>
 </html>

@@ -280,7 +280,7 @@ p { margin: 0; text-wrap: pretty; }
 /* Signal path: the chain Satprod covers, drawn as a schematic. */
 .signal { margin: clamp(40px, 7vh, 72px) 0 0; border-block: 1px solid var(--line-strong); padding-block: 22px 0; }
 .signal svg { width: 100%; height: auto; }
-.signal .signal-v { display: none; max-width: 340px; }
+.signal .signal-v { display: none; max-width: 280px; }
 @media (max-width: 700px) { .signal .signal-h { display: none; } .signal .signal-v { display: block; } }
 .signal figcaption { margin-top: 14px; padding: 10px 0; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-muted); }
 .signal .trace { fill: none; stroke: var(--fg); stroke-width: 1.5; }
@@ -695,3 +695,39 @@ p { margin: 0; text-wrap: pretty; }
 
 /* French: uppercase accented capitals (É, Î) need room above them */
 :lang(fr) :is(.hero h1, .page-hero h1, .statement blockquote, .cta h2, .lost h1) { line-height: 1; }
+
+/* ---------- conversion helpers ---------- */
+
+.clients { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px; margin-top: 40px; padding: 16px 0 0; }
+.clients + .signal { margin-top: 28px; }
+.clients-k { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--fg-muted); }
+.clients ul { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; padding: 0; list-style: none; }
+.clients a { font-family: var(--font-display); font-stretch: 85%; font-weight: 650; font-size: 1.05rem; text-decoration: none; color: var(--fg); }
+.clients a:hover { color: var(--accent-text); }
+
+.header-cta { display: none; }
+@media (max-width: 820px) { .header-cta { display: inline-flex; min-height: 40px; padding: 0 14px; font-size: 0.8rem; } }
+@media (max-width: 400px) { .header-cta { padding: 0 10px; } .brand { font-size: 1.1rem; } }
+
+.cta-alt { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-top: 16px; color: var(--fg-muted); }
+.cta .cta-alt .mail { margin-top: 0; }
+.svc-cta, .case-cta { margin-top: 28px; }
+
+.field label span { text-transform: none; letter-spacing: 0; opacity: .8; }
+.field select {
+  width: 100%; padding: 13px 40px 13px 14px; appearance: none;
+  border: 1px solid var(--line-strong); border-radius: var(--radius-s);
+  background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23888' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;
+  color: var(--fg); font: inherit; font-size: 1rem;
+}
+.field select:focus { outline: none; border-color: var(--fg); box-shadow: 3px 3px 0 var(--accent); }
+.field textarea::placeholder { color: var(--fg-muted); opacity: .7; }
+.sent .btn + .btn { margin-left: 8px; }
+
+.next-steps { margin-bottom: 8px; padding-bottom: 20px; border-bottom: 2px solid var(--fg); }
+.next-steps h2 { font-size: 1.5rem; font-stretch: 85%; }
+.next-steps ol { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: st; }
+.next-steps li { display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; border-top: 1px solid var(--line); counter-increment: st; }
+.next-steps li::before { content: counter(st, decimal-leading-zero); grid-row: span 2; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-text); padding-top: 3px; }
+.next-steps b { font-weight: 600; }
+.next-steps span { color: var(--fg-muted); font-size: 0.95rem; }
