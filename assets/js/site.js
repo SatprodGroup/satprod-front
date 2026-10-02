@@ -125,3 +125,18 @@
     });
   }
 })();
+
+/* ---------- customer lists in random order ----------
+   Any element with a data-shuffle attribute gets its children reordered
+   on each page load (Fisher-Yates), so no client is always listed first. */
+(function () {
+  'use strict';
+  document.querySelectorAll('[data-shuffle]').forEach(function (list) {
+    var items = Array.prototype.slice.call(list.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = items[i]; items[i] = items[j]; items[j] = tmp;
+    }
+    items.forEach(function (item) { list.appendChild(item); });
+  });
+})();
